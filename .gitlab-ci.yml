@@ -54,8 +54,4 @@ build:buildx:
     - docker buildx create --driver docker-container --use
     - docker buildx inspect --bootstrap
     - docker buildx ls
-<<<<<<< HEAD
-    - docker buildx build --platform $CI_BUILDX_ARCHS --progress plain --pull -t "$CI_APPLICATION_REPOSITORY:$CI_APP
-=======
     - docker buildx build --platform $CI_BUILDX_ARCHS --progress plain --pull -t "$CI_APPLICATION_REPOSITORY:$CI_APPLICATION_TAG" --push .
->>>>>>> a6de30733f731215ed3e283bb09de283650b1087
