@@ -48,8 +48,12 @@ load-module module-switch-on-port-available
 #load-module module-detect
 .endif
 
+.nofail
+
 load-module module-alsa-source device=hw:2,0
 load-module module-alsa-source device=hw:3,0
+
+.fail
 
 ### Load several protocols
 .ifexists module-esound-protocol-unix.so
