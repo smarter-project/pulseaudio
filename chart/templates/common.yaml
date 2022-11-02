@@ -26,7 +26,6 @@ spec:
       - name: {{ .Values.application.appName }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         image: {{ .Values.image.repository }}:{{ default .Chart.AppVersion .Values.image.tag }}
-        #command: ["/bin/sh","-c","while true; do sleep 10;done"]
         resources:
           limits:
             cpu: 350m
