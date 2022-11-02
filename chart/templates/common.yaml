@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: {{ .Values.application.appName }}
+  namespace: {{ .Values.application.namespace }}
+  labels:
+    name: {{ .Values.application.appName }}
+spec:
+  selector:
+    matchLabels:
+      name: {{ .Values.application.appName }}
+  template:
+    metadata:
+      labels:
+        name: {{ .Values.application.appName }}
+    spec:
+      nodeSelector:
+        {{ .Values.application.appName }}: enabled
+      tolerations:
+      - key: "smarter.type"
+        operator: "Equal"
+        value: "edge"
+        effect: "NoSchedule"
+      hostname: {{ .Values.application.appName }}
+      containers:
+      - name: {{ .Values.application.appName }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        image: {{ .Values.image.repository }}:{{ default .Chart.AppVersion .Values.image.tag }}
+        #command: ["/bin/sh","-c","while true; do sleep 10;done"]
+        resources:
+          limits:
+            cpu: 350m
+            memory: 100Mi
+            smarter-devices/snd: 1
+          requests:
+            cpu: 250m
+            memory: 100Mi
+            smarter-devices/snd: 1
+      terminationGracePeriodSeconds: 15
+
+

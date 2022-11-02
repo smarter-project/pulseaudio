@@ -1,0 +1,19 @@
+#
+
+application:
+  namespace: smarter
+  appName: smarter-pulseaudio
+
+image:
+  #repository: imtest
+  repository: registry.gitlab.com/smarter-project/edge-workloads/pulseaudio/update-alpine
+  # @default -- chart.appVersion
+  tag: ""
+  pullPolicy: IfNotPresent
+
+configuration:
+  mqtt:
+    host: smarter-fluent-bit
+  admission_controller:
+    host: smarter-admission-controller
+    port: 2520
