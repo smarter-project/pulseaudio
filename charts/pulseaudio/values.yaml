@@ -1,12 +1,9 @@
-#
-
 application:
   namespace: smarter
   appName: smarter-pulseaudio
 
 image:
-  #repository: imtest
-  repository: registry.gitlab.com/smarter-project/edge-workloads/pulseaudio/update-alpine
+  repository: ghcr.io/smarter-project/pulseaudio
   # @default -- chart.appVersion
   tag: ""
   pullPolicy: IfNotPresent
