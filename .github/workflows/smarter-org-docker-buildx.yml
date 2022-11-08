@@ -24,4 +24,4 @@ on:
 
 jobs:
   build:
-    uses: smarter-project/reusable-workflows/.github/workflows/smarter-org-docker-buildx.yml@68cf2c58d1e5fc8066abd36c7f8ca0525c897000
+    uses: smarter-project/reusable-workflows/.github/workflows/smarter-org-docker-buildx.yml@9927568ab57568aff1bf848e625686522261fb06
