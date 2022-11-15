@@ -26,10 +26,6 @@ spec:
       - name: {{ .Values.application.appName }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         image: {{ .Values.image.repository }}:{{ default .Chart.AppVersion .Values.image.tag }}
-        volumeMounts:
-        - mountPath: /run/udev/data
-          name: udev-data
-          readOnly: true
         resources:
           limits:
             cpu: 350m
@@ -40,11 +36,5 @@ spec:
             memory: 100Mi
             smarter-devices/snd: 1
       terminationGracePeriodSeconds: 15
-      volumes:
-      # To install cni plugin in the host
-      - hostPath:
-          path:  /run/udev/data
-          type: Directory
-        name: udev-data
 
 
