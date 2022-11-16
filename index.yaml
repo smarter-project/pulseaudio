@@ -15,6 +15,37 @@ entries:
         url: https://smarter-project.github.io/documentation/pgp_keys.asc
     apiVersion: v2
     appVersion: v0.0.5
+    created: "2022-11-16T21:09:50.606205693Z"
+    description: smarter-pulseaudio chart for SMARTER edge devices
+    digest: 729bcbfe4325046c2944518defabe14b704e0474a6f8a24e738372de1cc82cbb
+    home: https://getsmarter.io
+    icon: https://github.com/smarter-project/documentation/raw/main/ARM1636_Project_Logo_ST2_RGB_V1.png
+    keywords:
+    - kubernetes
+    - device
+    - triton
+    - pulseaudio
+    kubeVersion: '>=1.16.0-0'
+    name: smarter-pulseaudio
+    sources:
+    - https://github.com/smarter-project/pulseaudio
+    urls:
+    - https://github.com/smarter-project/pulseaudio/releases/download/smarter-pulseaudio-0.0.5/smarter-pulseaudio-0.0.5.tgz
+    version: 0.0.5
+  - annotations:
+      artifacthub.io/changes: |
+        - Fix template
+        - Add annotations
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/maintainers: |
+        - name: Alexandre Ferreira
+          email: alexandref75@gmail.com
+      artifacthub.io/prerelease: "false"
+      artifacthub.io/signKey: |
+        fingerprint: 71EDA4E3D652DC73EB09E3A5387D298C169CF24E
+        url: https://smarter-project.github.io/documentation/pgp_keys.asc
+    apiVersion: v2
+    appVersion: v0.0.5
     created: "2022-11-14T23:44:02.895224348Z"
     description: smarter-pulseaudio chart for SMARTER edge devices
     digest: 5e6430daa3a2f42d66e2eb8cad30c9ea865824cbdf7959781a0e04b9ade180bc
@@ -94,4 +125,4 @@ entries:
     urls:
     - https://github.com/smarter-project/pulseaudio/releases/download/smarter-pulseaudio-0.0.2/smarter-pulseaudio-0.0.2.tgz
     version: 0.0.2
-generated: "2022-11-14T23:44:02.895236848Z"
+generated: "2022-11-16T21:09:50.606260494Z"
